@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>AcademicEssentials - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="functions.js" defer></script>
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav id="topNav">
+            <a id="currentPage" href="index.html">AcademicEssentials</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <div class="container">
+                <div class="shopping">
+                    <a id="view-cart-button">View Cart</a>
+                </div>
+             </div>
+            <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="cart-fill.svg"><span class="quantity">0</span></a>
+            <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="chevron-down.svg"></a> 
+        </nav>
+     </header>
+    <div id="cart-view" class="card">
+        <h1>Items in Cart</h1>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+    
+    <section id="features" class="section-p1">
+        <h2>Thanks</h2>
+        <p>Thank you for shopping at AcademicEssentials</p>
+    </section>
+    <footer class="foot">&copy; 2023</footer>
+</body>
+</html>

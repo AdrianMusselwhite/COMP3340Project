@@ -20,7 +20,6 @@ fetch('http://localhost:5000/get_products')
               <button class="add-to-cart">Add to Cart</button>
             </div>
           </div>
-        </div>
       `;
     });
     productContainer.innerHTML = html;
