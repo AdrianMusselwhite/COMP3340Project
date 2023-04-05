@@ -49,18 +49,6 @@ function removeAllItems() {
     updateCartText();
 }
 
-function updateCart(event) {
-    const cartItems = document.querySelectorAll('.cart-item');
-    const cart = JSON.parse(localStorage.getItem("cart"));
-    cartItems.forEach(item => {
-        const name = item.querySelector('div.des span').textContent;
-        const quantity = item.querySelector('div.counter input[type="text"]').value;
-        cart[name].quantity = quantity;
-    });
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartText();
-}
-
 function addToCart(event) {
 
     console.log(event.parentNode)

@@ -2,9 +2,7 @@ fetch('http://localhost:5000/get_products')
   .then(response => response.json())
   .then(data => {
     const productContainer = document.getElementById('pro-container');
-    console.log("website")
     let html = '';
-    console.log(data)
     data.products.forEach(product => {
       html += `
           <div class="pro">
