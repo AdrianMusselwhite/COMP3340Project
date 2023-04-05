@@ -37,7 +37,7 @@ nav a:hover {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     nav:not(.expanded) a:nth-child(n+2) {
         display: none;
