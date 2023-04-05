@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <script src="functions.js" defer></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
 </head>
 
 <body>
@@ -15,24 +17,68 @@
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
             <a id="currentPage" href="about.html">About</a>
-                <div class="container">
-                    <div class="shopping">
-                        <a>View Cart</a>
-                    </div>
-                 </div>
-                <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="cart-fill.svg"><span class="quantity">0</span></a>
-                <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="chevron-down.svg"></a> 
+            <div class="container">
+                <div class="shopping">
+                    <a id="view-cart-button" onclick="updateCartText()">View Cart</a>
+                </div>
+            </div>
+            <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="./images/cart-fill.svg"></a>
+            <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="./images/chevron-down.svg"></a> 
         </nav>
     </header>
-    <!-- <div class="list"></div> -->
+
     <div class="card">
         <h1>Items in Cart</h1>
         <ul class="listCard"></ul>
         <div class="checkOut">
-            <div class="total">0</div>
+            <div class="total" id="totalCount">0</div>
             <div class="closeShopping">Close</div>
         </div>
     </div>
+
+    <h2 style="text-align: center;"><u>About Us</u></h2>
+
+    <div class="aboutUsPage">
+
+        <p>   
+        Welcome to <b>AcademicEssentials</b>, your one-stop-shop for all your school supply needs! We take pride in 
+        providing high-quality school supplies such as pencils, erasers, and rulers. We make it our goal to ensure 
+        that everything you need to succeed in your academic journey can be found right here on our website. 
+        Whether you're a parent shopping for your child or a teacher looking to stock up on classroom essentials, 
+        we've got you covered. All of our products are made with the highest quality materials and are designed to withstand 
+        the wear and tear that comes from daily use. We look forward to providing you with quality products for years to come.
+        </p>
+
+        <p>
+        <b>AcademicEssentials</b> was founded in 2023 with a goal of providing affordable and high-quality school supplies to students, teachers 
+        and parents across the country. We started with a small inventory of pencils, erasers, and rulers. Rapidly we gained a reputation
+        for selling high quality products while providing exceptional customer service. Within the last year we have expanded our 
+        product line to include a wider range of school supplies, including notebooks and calculators. As we continue to grow we
+        will remain committed to our mission of helping students achieve their academic goals by providing them with the tools they 
+        need to succeed. Our commitment to selling high quality products has made us a trusted name in the school 
+        supply industry, and we are dedicated to continuing to provide an excellent service for our existing and new customers.
+        </p>
+
+        <img src="./images/banner.jpg" style="margin-bottom: 30px;" alt="Image of school supplies">
+
+    </div>
+
+    <div class="aboutUsPage">
+
+        <p>   
+        <b>AcademicEssentials</b> currently ships to locations throughout Canada and the United States. Our headquarters is located in Windsor, Ontario, but we 
+        have several warehouses and distribution centers within Canada and the US.
+        </p>
+
+        <img src="./images/map.png" alt="Map">
+
+        <p>
+        Within the next few years we hope to expand our reach to other countries, so if you don't currently live in Canada or the United States and would like to
+        buy our products, please stay tuned for future updates!
+        </p>
+        
+    </div>
+
     <footer class="foot">&copy; 2023</footer>
 
 </body>

@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>AcademicEssentials - Home</title>
+    <title>AcademicEssentials - Cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,18 +21,19 @@
             <a href="about.html">About</a>
             <div class="container">
                 <div class="shopping">
-                    <a id="view-cart-button">View Cart</a>
+                    <a id="view-cart-button" onclick="updateCartText()">View Cart</a>
                 </div>
-             </div>
-            <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="cart-fill.svg"><span class="quantity">0</span></a>
-            <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="chevron-down.svg"></a> 
+            </div>
+            <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="./images/cart-fill.svg"></a>
+            <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="./images/chevron-down.svg"></a> 
         </nav>
      </header>
+
     <div id="cart-view" class="card">
         <h1>Items in Cart</h1>
         <ul class="listCard"></ul>
         <div class="checkOut">
-            <div class="total">0</div>
+            <div class="total" id="totalCount">0</div>
             <div class="closeShopping">Close</div>
         </div>
     </div>
@@ -42,7 +43,7 @@
         <div id="row">
             <div class="col-75">
                 <div class="form-container">
-                <form action="thanks.html">
+                <form action="thanks.html" class="cartForm">
                 <div class="col-50">
                 <h3>Payment</h3>
                     <label for="fname">Accepted Cards</label>
@@ -75,6 +76,8 @@
             </div>
         </div>
     </section>
+
     <footer class="foot">&copy; 2023</footer>
+
 </body>
 </html>

@@ -230,11 +230,83 @@ footer{
     left: calc(100% - 500px);
 }
 
-/* .active .container {
-    transform: translateX(-200px);
-} */
+.cartForm input, label, textarea {
+    padding: 10px;
+    margin: 5px;
+}
 
 .shopping a{
     color: white;
     cursor: pointer;
+}
+
+.aboutUsPage {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.aboutUsPage p {
+    margin: 30px;
+}
+
+.aboutUsPage img {
+    max-width: 90%;
+    margin-left: 50%; 
+    transform: translateX(-50%);
+    border: 1px black solid;
+    display: block;
+}
+
+.contactPageForm {
+    margin-bottom: 30px;
+    margin-left: 50%; 
+    transform: translateX(-50%);
+    border: 1px black solid;
+    border-radius: 25px;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+}
+
+#contactForm  {
+    display: grid;
+    width: 90%;
+    max-width: 1200px;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.contactFormElements input, label, textarea {
+    padding: 10px;
+}
+
+.contactPage {
+    margin-bottom: 30px;
+    margin-left: 50%; 
+    transform: translateX(-50%);
+    border: 1px black solid;
+    border-radius: 25px;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.introParagraph {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
+    background-color: rgb(255, 140, 102);
+    border-radius: 25px;
+    padding: 30px;
 }

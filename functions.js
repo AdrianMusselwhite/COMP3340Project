@@ -5,11 +5,11 @@ function expandFunction(){
 
     if (topNavBar.classList.contains("expanded")){
         topNavBar.classList.remove("expanded")
-        expandButton.firstElementChild.src="chevron-down.svg"
+        expandButton.firstElementChild.src="./images/chevron-down.svg"
     }
     else {
         topNavBar.classList.add("expanded")
-        expandButton.firstElementChild.src="chevron-up.svg"
+        expandButton.firstElementChild.src="./images/chevron-up.svg"
     }
 }
 
@@ -21,27 +21,27 @@ function increaseCount(a, b) {
     input.value = value;
   }
   
-  function decreaseCount(a, b) {
-    var input = b.nextElementSibling;
-    var value = parseInt(input.value, 10);
-    if (value > 1) {
-      value = isNaN(value) ? 0 : value;
-      value--;
-      input.value = value;
-    }
+function decreaseCount(a, b) {
+  var input = b.nextElementSibling;
+  var value = parseInt(input.value, 10);
+  if (value > 1) {
+    value = isNaN(value) ? 0 : value;
+    value--;
+    input.value = value;
   }
+}
 
-  let openShopping = document.querySelector('.shopping');
-  let closeShopping = document.querySelector('.closeShopping');
-  let list = document.querySelector('.list');
-  let listCard = document.querySelector('.listCard');
-  let body = document.querySelector('body');
-  let total = document.querySelector('.total');
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
 
-  openShopping.addEventListener('click', ()=>{
-    body.classList.add('active');
-  })
+openShopping.addEventListener('click', ()=>{
+  body.classList.add('active');
+})
 
-  closeShopping.addEventListener('click', ()=>{
-   body.classList.remove('active'); 
-  })
+closeShopping.addEventListener('click', ()=>{
+  body.classList.remove('active'); 
+})

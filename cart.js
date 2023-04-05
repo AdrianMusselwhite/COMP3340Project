@@ -1,24 +1,12 @@
 const prodArr = ["Pens", "Pencils", "Notebook", "Highlighters", "Sticky Notes", "Dry Erase Board", "Dry Erase Markers", "Calculator", "Backpack", "3-Ring Binder", "Coloured Pencils", "12\" Ruler", "Glue Stick", "Crayons", "Stapler", "Scissors"];
 
-document.addEventListener("readystatechange", addListeners);
-location.reload()
-
-function addListeners() {
-    
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    addToCartButtons.forEach(button => {
-        button.addEventListener("click", addToCart);
-        console.log("ADD-TO-CART BUTTON EVENT LISTENER ADDED");
-    });
-
-    const viewCartButton = document.getElementById("view-cart-button");
-    viewCartButton.addEventListener("click", updateCartText)
-}
-
 function updateCartText() {
+
+    console.log("UPDATING!!")
     const cartDiv = document.querySelector(".listCard");
     let html = '';
     let total = 0.0;
+    let count = 0;
     const cart = JSON.parse(localStorage.getItem("cart"));
     if (cart) {
         for (let i = 0; i < prodArr.length; i++) {
@@ -30,34 +18,27 @@ function updateCartText() {
                 html += `
                 <div class="pro cart-item">
                     <div class="des">
-                    <span>${name}</span>
-                    <h4>$${price} each</h4>
-                    <div class="counter">
-                        <p>Quantity:</p>
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="${quantity}">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
+                        <span>${name}</span> 
+                        <span style="color:	#e61300"> x ${quantity}</span>
+                        <h4>$${price} each</h4>
                     </div>
                 </div>
                 `;
                 total += (price * quantity);
+                count += quantity;
             }
         }
     }
 
-    
     html += `
-    <button id="update-cart">Update Cart</button>
-    <br>
-    <h2>Total: $${total}</h2>
+    <h2>Total: $${total.toFixed(2)}</h2>
     <br>
     <button id="remove-all">Remove All Items</button>
     `  
     cartDiv.innerHTML = html;
 
-    const updateCartButton = document.getElementById("update-cart");
-    updateCartButton.addEventListener("click", updateCart)
+    const totalCount = document.getElementById("totalCount");
+    totalCount.innerHTML = count;
 
     const removeAllButton = document.getElementById("remove-all");
     removeAllButton.addEventListener("click", removeAllItems);
@@ -81,11 +62,11 @@ function updateCart(event) {
 }
 
 function addToCart(event) {
-    const productName = event.target.parentNode.querySelector("span").textContent;
-    const productPrice = parseFloat(event.target.parentNode.querySelector("h4").textContent.slice(1));
-    const productQuantity = parseInt(event.target.parentNode.querySelector("input").value);
-  
-    console.log("ADD TO CART PRESSED!!!!");
+
+    console.log(event.parentNode)
+    const productName = event.parentNode.querySelector("span").textContent;
+    const productPrice = parseFloat(event.parentNode.querySelector("h4").textContent.slice(1));
+    const productQuantity = parseInt(event.parentNode.querySelector("input").value);
 
   // Create an object to represent the product
     const product = {
@@ -108,5 +89,8 @@ function addToCart(event) {
     
     // Save the shopping cart to localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(localStorage.getItem("cart"))
+
+    updateCartText()
 }
 

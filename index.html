@@ -21,21 +21,23 @@
             <a href="about.html">About</a>
             <div class="container">
                 <div class="shopping">
-                    <a id="view-cart-button">View Cart</a>
+                    <a id="view-cart-button" onclick="updateCartText()">View Cart</a>
                 </div>
-             </div>
-            <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="cart-fill.svg"><span class="quantity">0</span></a>
-            <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="chevron-down.svg"></a> 
+            </div>
+            <a class="imgLink" href="cart.html"><img style="filter: invert(1)" src="./images/cart-fill.svg"></a>
+            <a id="expand" class="imgLink" onclick="expandFunction()"><img style="filter: invert(1)" src="./images/chevron-down.svg"></a> 
         </nav>
-     </header>
+    </header>
+
     <div id="cart-view" class="card">
         <h1>Items in Cart</h1>
         <ul class="listCard"></ul>
         <div class="checkOut">
-            <div class="total">0</div>
+            <div class="total" id="totalCount">0</div>
             <div class="closeShopping">Close</div>
         </div>
     </div>
+
     <section id="hero">
         <h1>Super Sale</h1>
         <h2>Deals Left and Right On All Products!</h2>
@@ -47,6 +49,8 @@
         <div id="pro-container">
         </div>
     </section>
+
     <footer class="foot">&copy; 2023</footer>
+    
 </body>
 </html>
