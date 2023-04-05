@@ -264,8 +264,8 @@ footer{
 
 .contactPageForm {
     margin-bottom: 30px;
-    margin-left: 50%; 
-    transform: translateX(-50%);
+    margin-left: 10%;
+    margin-right: 10%;
     border: 1px black solid;
     border-radius: 25px;
     padding: 30px;
@@ -277,7 +277,7 @@ footer{
 #contactForm  {
     display: grid;
     width: 90%;
-    max-width: 1200px;
+    max-width: 100%;
     grid-template-columns: 1fr 3fr;
     column-gap: 10px;
     row-gap: 15px;
@@ -291,8 +291,8 @@ footer{
 
 .contactPage {
     margin-bottom: 30px;
-    margin-left: 50%; 
-    transform: translateX(-50%);
+    margin-left: 15%;
+    margin-right: 15%;
     border: 1px black solid;
     border-radius: 25px;
     padding: 30px;
